@@ -10,13 +10,17 @@ To write a program to predict the profit of a city using the linear regression m
 ## Algorithm
 
 
-1.Import all the required packages.
+1. Load necessary libraries like numpy, pandas, and StandardScaler for scaling features and target variables.
 
-2.Display the output values using graphical representation tools as scatter plot and graph.
+2.Implement a linear_regression function that uses gradient descent to minimize the cost function and compute optimal model parameters (theta).
 
-3.predict the values using predict() function.
+3.Read the dataset from a CSV file, extract features (X) and target variable (y), and convert them to numeric types.
 
-4.Display the predicted values and end the program
+4.Scale both the feature matrix (X1) and target variable (y) using StandardScaler to improve gradient descent performance.
+
+5.Call the linear_regression function with the scaled features and target to compute the model parameters (theta).
+
+6.Scale new data using the same scaler, apply the model parameters (theta), and inverse scale the prediction to get the final result.
 
 ## Program:
 ```
