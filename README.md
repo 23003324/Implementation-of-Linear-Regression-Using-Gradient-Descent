@@ -10,18 +10,25 @@ To write a program to predict the profit of a city using the linear regression m
 ## Algorithm
 
 
-1. Load necessary libraries like numpy, pandas, and StandardScaler for scaling features and target variables.
+1.Import necessary libraries for numerical operations, data handling, and preprocessing.
 
-2.Implement a linear_regression function that uses gradient descent to minimize the cost function and compute optimal model parameters (theta).
+2.Load the startup dataset (50_Startups.csv) using pandas.
 
-3.Read the dataset from a CSV file, extract features (X) and target variable (y), and convert them to numeric types.
+3.Extract feature matrix X and target vector y from the dataset.
 
-4.Scale both the feature matrix (X1) and target variable (y) using StandardScaler to improve gradient descent performance.
+4.Convert feature and target values to float and reshape if necessary.
 
-5.Call the linear_regression function with the scaled features and target to compute the model parameters (theta).
+5.Standardize X and y using StandardScaler.
 
-6.Scale new data using the same scaler, apply the model parameters (theta), and inverse scale the prediction to get the final result.
+6.Add a column of ones to X to account for the bias (intercept) term.
 
+7.Initialize model parameters (theta) to zeros.
+
+8.Perform gradient descent to update theta by computing predictions and adjusting for error.
+
+9.Input a new data point, scale it, and add the intercept term.
+
+10.Predict the output using learned theta, then inverse-transform it to get the final result.
 ## Program:
 ```
 /*
@@ -66,25 +73,18 @@ print(f"Predicted value: {pre}")
 ```
 
 ## Output:
-![Screenshot 2025-03-07 183700](https://github.com/user-attachments/assets/7c7cd804-88a5-45ac-9a85-997b894a402c)
 
+![Screenshot 2025-04-27 092957](https://github.com/user-attachments/assets/d0518211-0ab1-4410-861b-54049b09b23d)
 
-![Screenshot 2025-03-07 183748](https://github.com/user-attachments/assets/695cd6ec-28b5-4ba9-aa6a-6c1fa7d4367d)
+![Screenshot 2025-04-27 093005](https://github.com/user-attachments/assets/6da9712e-212a-4c64-9f4d-f22364828fa7)
 
+![Screenshot 2025-04-27 093013](https://github.com/user-attachments/assets/2007f814-b828-44de-ad13-14dd30841a10)
 
+![Screenshot 2025-04-27 093013](https://github.com/user-attachments/assets/9f64a2cc-050f-496d-ba1b-e6722f7805cb)
 
-![Screenshot 2025-03-07 183832](https://github.com/user-attachments/assets/87d929d9-6130-4027-8974-21661ed7435c)
+![Screenshot 2025-04-27 093020](https://github.com/user-attachments/assets/3945eb6c-cb92-4514-b6a1-5b5e34433ded)
 
-
-![Screenshot 2025-03-07 183918](https://github.com/user-attachments/assets/49957d31-30df-48dc-ad32-d44125b56e2f)
-
-
-![Screenshot 2025-03-07 183948](https://github.com/user-attachments/assets/3f962597-0ce8-4d0f-97d8-0d87062c869f)
-
-
-
-
-
+![Screenshot 2025-04-27 093027](https://github.com/user-attachments/assets/6e9c7b7d-d8ac-480a-852a-a2850e2a99e4)
 
 
 ## Result:
